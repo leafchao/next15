@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/.history
+.history
 .idea
 /.pnp
 .pnp.*
@@ -11,7 +11,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+/package-lock.json
 # testing
 /coverage
 
