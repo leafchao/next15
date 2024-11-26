@@ -2,11 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Comforter } from 'next/font/google'
 
-const comforter = Comforter({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap', // 未加载字体之前，使用默认字体 
-})
+const comforter = Comforter({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={comforter.className}>
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,12 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Comforter } from 'next/font/google'
+import Header from '@/app/_components/header'
 
-const comforter = Comforter({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap', // 未加载字体之前，使用默认字体 
-})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,8 +14,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={comforter.className}>
-      <body>{children}</body>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }

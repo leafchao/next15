@@ -1,12 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Comforter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
-const comforter = Comforter({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap', // 未加载字体之前，使用默认字体 
-})
+const inter = Inter({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={comforter.className}>
-      <body>{children}</body>
+    <html lang="en" className={inter.className}>
+      <body>
+        {children}
+      </body>
     </html>
   )
 }
