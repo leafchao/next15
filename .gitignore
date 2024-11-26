@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/.history
+.idea
 /.pnp
 .pnp.*
 .yarn/*
@@ -19,6 +21,7 @@
 
 # production
 /build
+/ci/build
 
 # misc
 .DS_Store
