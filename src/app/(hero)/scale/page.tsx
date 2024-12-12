@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Scale() {
   return (
     <div className='relative h-screen w-screen'>
-      <PageBox type="scale" title="Scale" />
+      <PageBox type="scale" title="Scale your app to infinity" />
     </div>
   )
 }

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Performance() {
   return (
     <div className='relative h-screen w-screen'>
-      <PageBox type='performance' title='Performance' />
+      <PageBox type='performance' title='We serve high performance applications' />
     </div>
   )
 }

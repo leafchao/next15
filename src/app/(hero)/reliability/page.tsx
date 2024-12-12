@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Reliability() {
   return (
     <div className='relative h-screen w-screen'>
-      <PageBox type="reliability" title="Reliability" />
+      <PageBox type="reliability" title="Super high reliability hosting" />
     </div>
   )
 }
