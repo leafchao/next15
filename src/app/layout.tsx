@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Comforter } from 'next/font/google'
 import { AntdRegistry } from '@ant-design/nextjs-registry'
+import Link from 'next/link'
 
-const comforter = Comforter({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap', // 未加载字体之前，使用默认字体
-})
+// const comforter = Comforter({
+//   subsets: ['latin'],
+//   weight: '400',
+//   display: 'swap', // 未加载字体之前，使用默认字体
+// })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,13 +17,29 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  team,
+  analytics,
 }: Readonly<{
   children: React.ReactNode
+  team: React.ReactNode
+  analytics: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={comforter.className}>
+    <html lang="en">
       <body>
-        <AntdRegistry>{children}</AntdRegistry>
+        <AntdRegistry>
+          <div className=' container mx-auto'>
+            <div className='flex justify-center text-blue-500 p-6 gap-6'>
+              <Link href="/">Home</Link>
+              <Link href="/visitors">Visitors</Link>
+            </div>
+            <div className='flex gap-6'>
+              {team}
+              {analytics}
+            </div>
+            {children}
+          </div>
+        </AntdRegistry>
       </body>
     </html>
   )
