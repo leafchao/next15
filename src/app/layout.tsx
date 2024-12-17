@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Comforter } from 'next/font/google'
 import { AntdRegistry } from '@ant-design/nextjs-registry'
-import Link from 'next/link'
 
 // const comforter = Comforter({
 //   subsets: ['latin'],
@@ -17,13 +16,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode
+  modal: React.ReactNode
 }>) {
   return (
     <html lang="en">
       <body>
-        <AntdRegistry>{children}</AntdRegistry>
+        <AntdRegistry>
+          {children}
+          {modal}
+        </AntdRegistry>
       </body>
     </html>
   )
