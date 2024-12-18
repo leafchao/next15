@@ -5,10 +5,10 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
 // nextjs15 并行路由拦截有问题
-function Page({ params }: { params: { id: string } }) {
-  console.log('params= ', params.id)
-  const photo = photos.find((photo) => photo.id === params.id)!
+function Page(props: { params: { id: string } }) {
   const router = useRouter()
+  const id = props.params.id
+  const photo = photos.find((photo) => photo.id === id)!
   return (
     <div
       className="flex justify-center items-center fixed inset-0 bg-gray-500/[.8]"

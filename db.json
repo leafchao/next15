@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "ejfac5ly",
+      "title": "训练营",
+      "content": "React 训练营"
+    },
+    {
+      "id": "u5crc8oa",
+      "title": "训练营",
+      "content": "Vue3 训练营"
+    },
+    {
+      "id": "1l0m6v89",
+      "title": "训练营",
+      "content": "Vue2 训练营"
+    },
+    {
+      "id": "mtdq23qe",
+      "title": "训练营",
+      "content": "Vue1 训练营"
+    },
+    {
+      "id": "dgh13slr",
+      "title": "训练营",
+      "content": "Vue5 训练营"
+    }
+  ]
+}
